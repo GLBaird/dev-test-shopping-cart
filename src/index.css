@@ -1,0 +1,122 @@
+:root {
+  --text: #27262a;
+  --text-h: #08060d;
+  --bg: #efefef;
+  --page: #ffffff;
+  --border: #c2c1c1;
+  --navigation-header: #91b5ff;
+  --navigation-gap: 1em;
+  --error: #e72521;
+  --shadow:
+    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  --border-radius: 0.5rem;
+
+  /* Colors for Logo Placeholder */
+  --logo-tile-start: #f8fafc;
+  --logo-tile-end: #e2e8f0;
+  --logo-border: #cbd5e1;
+  --logo-grid: #cbd5e1;
+  --logo-guide: #94a3b8;
+  --logo-anchor-fill: #ffffff;
+  --logo-shadow: #0f172a;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --page: #1c1c1c;
+    --border: #2e303a;
+    --navigation-header: #293c5e;
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+
+    /* Logo Placeholder Dark Colors */
+    --logo-tile-start: #1e293b;
+    --logo-tile-end: #0f172a;
+    --logo-border: #475569;
+    --logo-grid: #334155;
+    --logo-guide: #94a3b8;
+    --logo-anchor-fill: #0f172a;
+    --logo-shadow: #000000;
+  }
+}
+
+#root {
+  background: var(--page);
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  margin-inline: 2em;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  padding-inline: 0.5rem;
+  padding-block: 0.7rem;
+  border-radius: var(--border-radius);
+  border: none;
+}

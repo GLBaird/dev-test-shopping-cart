@@ -1,0 +1,16 @@
+import { z } from 'zod'
+
+export const productSchema = z.object({
+    id: z.string().nonempty(),
+    name: z.string().nonempty(),
+    image: z.string(),
+    dateAdded: z.coerce.date(),
+    price: z.number().min(100),
+    stock: z.number()
+})
+
+export type Product = z.infer<typeof productSchema>
+
+export type QuantityProduct = Omit<Product, 'stock'> & {
+    qty: number
+}

@@ -1,0 +1,35 @@
+.shoppingCart {
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    li:nth-child(odd) {
+        background: var(--bg);
+    }
+}
+
+.empty {
+    text-align: end;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    border: var(--text) solid;
+    border-width: 1px 0;
+    padding-block: 0.5em;
+}
+
+.order {
+    text-align: end;
+    margin-top: 1em;
+}
+
+.orderNumber {
+    margin-top: 1rem;
+}
+
+.error {
+    color: var(--error);
+}

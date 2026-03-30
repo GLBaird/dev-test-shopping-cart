@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    max-height: 100vh;
+}
+
+.scroll {
+    flex-grow: 1;
+    overflow: auto;
+}

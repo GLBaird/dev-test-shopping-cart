@@ -1,0 +1,25 @@
+.itemRow {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    margin-block: 0.2em;
+    gap: 0.5em;
+    padding-inline: 0.5rem;
+    padding-block: 0.7rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.5em;
+
+    button {
+        padding-inline: 0.2rem;
+        padding-block: 0.3rem;
+        border-radius: var(--border-radius);
+        border: none;
+    }
+}
+
+.price {
+    text-align: end;
+}

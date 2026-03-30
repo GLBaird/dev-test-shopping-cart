@@ -1,0 +1,19 @@
+.loadingContainer {
+    margin-top: 30vh;
+}
+
+.error {
+    color: var(--error);
+    margin-top: 1em;
+}
+
+.productList {
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+}
+
+.orderBy {
+    text-align: end;
+}
