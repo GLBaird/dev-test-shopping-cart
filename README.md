@@ -21,6 +21,16 @@ To run e2e tests with Playwright:
 npm run e2e
 ```
 
+## Screen Shots (light mode)
+
+Product Page:
+
+![Products](readme-images/products.png)
+
+Cart View:
+
+![Shopping Cart](readme-images/cart.png)
+
 ## Notes on development
 
 I chose to scaffold the app and setup with Vite, rather than a full stack like NextJS or TanStack as this seemed
