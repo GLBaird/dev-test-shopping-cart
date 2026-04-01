@@ -2,11 +2,11 @@ import { NavLink } from "react-router";
 import { Logo } from "@/components/Logo"
 import { Home, CirclePile, ShoppingBasket } from 'lucide-react'
 import styles from './Navigation.module.css'
-import {useContext} from "react";
+import {type ReactNode, useContext} from "react";
 import {StoreDataContext} from "@/contexts/store-data";
 import {getBasketQty} from "@/lib/get-basket-qty";
 
-const StyledNavLink = ({ to, children }: { to: string, children: string }) => (
+const StyledNavLink = ({ to, children }: { to: string, children: ReactNode }) => (
     <NavLink
         to={to}
         className={
@@ -26,17 +26,23 @@ export default function Navigation() {
                 <Logo className={styles.logo} />
                 <ul>
                     <li>
-                        <Home />
-                        <StyledNavLink to="/">Home</StyledNavLink>
+                        <StyledNavLink to="/">
+                            <Home />
+                            <span>Home</span>
+                        </StyledNavLink>
                     </li>
                     <li>
-                        <CirclePile />
-                        <StyledNavLink to="/products">Products</StyledNavLink>
+                        <StyledNavLink to="/products">
+                            <CirclePile />
+                            <span>Products</span>
+                        </StyledNavLink>
                     </li>
                     <li>
-                        <ShoppingBasket />
-                        <StyledNavLink to='/cart'>Shopping Cart</StyledNavLink>
-                        {itemsInBasket > 0 && <span>(x{itemsInBasket})</span>}
+                        <StyledNavLink to='/cart'>
+                            <ShoppingBasket />
+                            <span>Shopping Cart</span>
+                            {itemsInBasket > 0 && <span>(x{itemsInBasket})</span>}
+                        </StyledNavLink>
                     </li>
                 </ul>
             </nav>

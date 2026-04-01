@@ -64,8 +64,6 @@ The following things I would like to develop further if I had more time on the p
 - fallback content for old browsers - I usually add fallback content for extremely old browsers, so branding and an update message appears instead of a broken app or blank screen.
 - accessibility - I would like to have added more accessibility support for screen readers, including marking the basket area using aria for live updates, meaning any content changes would be notified to the screen reader. 
 - better feedback - on screen updates with a pop-up when adding an item to the basket, again, can help with accessibility, but also makes it easier to see when an item is added to the basket.
-- ui-tweaks - lots to improve in the UI/UX - especially the nav bar where only the text has the active link. This was due to how the navigation was originally text only, and a last minute change added the extra icon and box effect.
-
 
 ## Folder structure
 

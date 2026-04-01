@@ -16,28 +16,25 @@
         gap: var(--navigation-gap)
     }
 
-    li {
+    a {
         display: flex;
         align-items: center;
         gap: 0.3rem;
         background: var(--navigation-header);
         transition: background 0.2s ease;
-        padding-inline: 0.2rem;
+        padding-inline: 0.3rem;
         padding-block: 0.5rem;
         border-radius: var(--border-radius);
-    }
-
-    a {
         text-decoration: none;
         color: var(--text);
         white-space: nowrap;
     }
 
-    a.active {
+    a.active span {
         border-bottom: 1px var(--text) solid;
     }
 
-    li:hover {
+    a:hover {
         background: color-mix(in oklab, var(--navigation-header), var(--page) 30%);
     }
 }

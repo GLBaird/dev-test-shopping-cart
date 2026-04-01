@@ -11,6 +11,10 @@ export const productSchema = z.object({
 
 export type Product = z.infer<typeof productSchema>
 
-export type QuantityProduct = Omit<Product, 'stock'> & {
-    qty: number
-}
+export const quantityProductSchema = productSchema
+    .omit({ stock: true })
+    .extend({
+        qty: z.number().int().nonnegative(),
+    })
+
+export type QuantityProduct = z.infer<typeof quantityProductSchema>

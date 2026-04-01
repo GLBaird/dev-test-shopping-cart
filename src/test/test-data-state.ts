@@ -1,4 +1,5 @@
 import type {Product, QuantityProduct} from "@/types/Product";
+import {State} from "../reducers/store-data";
 
 export const sampleCart: QuantityProduct[] = [
     {
@@ -29,4 +30,5 @@ export const sampleCart: QuantityProduct[] = [
 
 export const sampleProducts: Product[] = sampleCart.map(item => ({ ...item, stock: 10 }))
 
-export const state = { products: sampleProducts, cart: sampleCart }
+export const getInitialStateWithCart = (): State => structuredClone( { products: sampleProducts, cart: sampleCart, error: null })
+export const getInitialStateWithEmptyCart = (): State => ({ products: structuredClone(sampleProducts), cart: [], error: null })
