@@ -65,6 +65,24 @@ The following things I would like to develop further if I had more time on the p
 - accessibility - I would like to have added more accessibility support for screen readers, including marking the basket area using aria for live updates, meaning any content changes would be notified to the screen reader. 
 - better feedback - on screen updates with a pop-up when adding an item to the basket, again, can help with accessibility, but also makes it easier to see when an item is added to the basket.
 
+## Notes for production issues
+
+This is a simulator rather than a working product. Some factors would be considered when designing for production. 
+The first would be paging the data for the products. This simulator only has four products, and is not designed to handle
+large amounts of product data. For a real production system that can display an unknown number of products, that can be 
+large or small quantities, then the system should page based on how much data it gets back. Therefore there would be 
+offset and limits on each request for data, and a design decision based on either infinite scrolling (loading extra data
+as the user scrolls through the produt list) or numbered pages, which would need a count value for the total number of 
+products in order to display the required number of page values on the UI.
+
+Also, there would need to be a system inplace to guarantee order fulfilment based on availability. If the stock regularly changes
+(like on a train ticket booking site) - and this would be within the scope of time a user would browse the product list, then
+regular polling of data would be used to refresh the product list at regular intervals. An API would also be used when 
+placing an item into the basket to check its availability and reserve the product for the user to guarantee order fulfilment.
+The reservation of the stock for the user would usually be for a limited period of time, say half and hour. Also, there would 
+usually be limits in place for the amount of stock an individual user could reserve on one order (to avoid limited stock
+being locked out of purchase by users whom keep multiple items in the basket without making a purchase).
+
 ## Folder structure
 
 The project structure is as follows:
